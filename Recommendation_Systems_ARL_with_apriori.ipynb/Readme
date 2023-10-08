@@ -1,1 +1,45 @@
+About Dataset
+The dataset was obtained from a UK-based online store. Includes sales between 01/12/2009 - 09/12/2011.
 
+Dataset Columns
+
+InvoiceNo: Invoice number. The unique number of each transaction, namely the invoice. Aborted operation if it starts with C.
+
+StockCode: Product code. Unique number for each product
+
+Description: Product name
+
+Quantity: Number of products. It expresses how many of the products on the invoices have been sold.
+
+InvoiceDate: Invoice date and time.
+
+UnitPrice: Product price (in GBP)
+
+CustomerID: Unique customer number
+
+Country: Country name. Country where the customer lives.
+
+Steps
+1. Data Preprocessing
+Data preprocessing is a critical step in data analysis and machine learning, as it involves transforming raw data into a format that is suitable for analysis or model training. This process can include cleaning the data by removing duplicates, correcting errors, and handling missing values, as well as transforming the data by scaling or normalizing it, feature engineering, and selecting relevant variables. The goal of data preprocessing is to improve the quality of the data and reduce the noise, so that it can be analyzed effectively and used to develop accurate models that provide meaningful insights. Overall, data preprocessing is a crucial step in any data science project, as it can greatly impact the accuracy and effectiveness of the resulting models.
+
+2. Create Association Rule Learning(ARL) data structure,
+This is Association Rule Learning, a learning method used as a data mining technique that aims to determine the relationships between items in a dataset.
+
+Association Rule Learning is used to discover frequency-based relationships between items in a dataset. For example, in a customer shopping dataset in a market, there could be a rule like "customers who buy milk also buy bread." This rule can be used to analyze customer behavior and develop more effective marketing strategies.
+
+Association Rule Learning typically consists of two steps: 1) Creating frequency tables and 2) Determining association rules. Frequency tables show the frequency of items appearing together in the dataset, while the association rule determines the relationship between items.
+
+Association Rule Learning is especially used for analyzing large datasets, such as in the retail sector. This technique is an important tool for developing marketing strategies, product placement, and inventory management.
+
+3. Extracting Association Rules
+Extracting Association Rules is a data mining technique used to determine relationships between items in a dataset. This technique is also known as Association Rule Learning.
+
+Extracting Association Rules is commonly used for analyzing large datasets, such as in the retail sector. This technique is an important tool for analyzing customer behavior, developing marketing strategies, product placement, and inventory management.
+
+Extracting Association Rules is used to determine relationships between items in a dataset. For example, in a customer shopping dataset in a market, there could be a rule like "customers who buy milk also buy bread." This rule can be used to analyze customer behavior and develop more effective marketing strategies.
+
+Extracting Association Rules typically consists of two steps: 1) Creating frequency tables and 2) Determining association rules. Frequency tables show the frequency of items appearing together in the dataset, while association rules determine the relationship between items.
+
+4. Making Product Suggestions to Users at the Basket Stage
+Suggesting a product according to the product in the customer's basket
