@@ -1,0 +1,76 @@
+Content Based Recommendation
+
+Content-based recommendation, also known as content-based filtering, is a recommendation system that provides users with personalized recommendations based on their interests. This recommendation system suggests similar content based on the content the user has consumed in the past.
+
+This type of recommendation system distinguishes content from one another using predefined features and brings together content with similar features. For example, the features for a movie may include genre, actors, director, plot, etc.
+
+Based on a user's past consumption habits, the system suggests other content with similar features. For example, if a user has previously watched romantic comedies, the system will suggest romantic comedies with similar features.
+
+The content-based recommendation system is particularly successful in areas where the content remains relatively fixed, such as music, movies, books, and news recommendations.
+
+Steps
+1. EDA(Exploratory Data Analysis)
+EDA stands for Exploratory Data Analysis, which is an approach to analyzing and summarizing a dataset in order to gain insights and identify patterns and relationships between variables.
+
+EDA involves visualizing and manipulating data using various statistical and computational methods, in order to identify patterns, anomalies, and trends. Some common techniques used in EDA include scatter plots, histograms, box plots, and correlation analysis.
+
+The goal of EDA is to understand the data and the relationships between variables, so that we can identify potential problems, such as missing data, outliers, or errors in the dataset, and address them appropriately. EDA is often the first step in the data analysis process and is essential for making informed decisions about how to proceed with data modeling and analysis.
+
+2. Creating the TF-IDF Matrix
+
+TF:
+TF stands for Term Frequency and it measures the frequency of a term (i.e., a word or a phrase) in a document. The term frequency of a term t in a document d is calculated as the number of times t appears in d, divided by the total number of terms in d. This calculation normalizes the term frequency by the document length to avoid bias towards longer documents.
+
+TF is commonly used in natural language processing and information retrieval to represent the importance of a term within a document. It can be used in combination with IDF (Inverse Document Frequency) to calculate the TF-IDF score, which provides a measure of the importance of a term across a collection of documents.
+
+IDF:
+IDF stands for Inverse Document Frequency and it is used to determine how important a word is in a document collection. IDF measures the rarity of a term across the entire document collection. Words that occur frequently across the collection, such as "the" or "and," will have a low IDF value, while words that are rare, such as domain-specific jargon, will have a higher IDF value.
+
+The IDF score of a term is calculated as the logarithm of the total number of documents in the collection divided by the number of documents that contain the term. The formula for IDF is:
+
+IDF = log(N / df)
+
+where N is the total number of documents in the collection, and df is the number of documents that contain the term.
+
+The IDF value is used in the TF-IDF (Term Frequency-Inverse Document Frequency) formula to calculate the importance of a term in a document. The higher the IDF score, the more important the term is in distinguishing between documents.
+
+Text Vectorization:
+Text vectorization is the process of transforming text into numerical vectors that can be processed by machine learning algorithms. In natural language processing (NLP), text vectorization is a crucial step in building machine learning models that can analyze and understand human language.
+
+There are several ways to vectorize text, but one common approach is the Bag-of-Words (BoW) model. In the BoW model, the text is first preprocessed by removing stop words and punctuation, and then the remaining words are tokenized into a list of terms. The model then creates a dictionary of all the unique terms in the corpus and assigns each term an index. Finally, each document is represented as a vector of term frequencies, where each entry in the vector corresponds to the count of the corresponding term in the document.
+
+Another popular approach to text vectorization is the Term Frequency-Inverse Document Frequency (TF-IDF) model, which takes into account the relative frequency of a term in a document and across the entire corpus. This model assigns a weight to each term in the document, based on how frequently it occurs in the document and how rare it is in the entire corpus.
+
+Text vectorization is an important technique in NLP because it allows machine learning models to analyze and process large volumes of textual data, which can then be used to build applications such as sentiment analysis, chatbots, and information retrieval systems.
+
+Ekran görüntüsü 2023-04-01 185514.png
+
+3. Creating the Cosine Similarity Matrix
+
+Cosine similarity:
+Cosine similarity is a measure of similarity between two non-zero vectors in a high-dimensional space. It is commonly used in natural language processing and information retrieval to compare the similarity of two documents or pieces of text.
+
+To calculate the cosine similarity between two vectors, we first compute the dot product of the two vectors, which is the sum of the products of their corresponding elements. Then, we divide the dot product by the product of their magnitudes to obtain the cosine of the angle between the two vectors. The resulting value is a measure of the similarity between the two vectors, with a value of 1 indicating that the vectors are identical, and a value of 0 indicating that the vectors are completely dissimilar.
+
+In the context of text similarity, cosine similarity is often used to compare the similarity of two documents or pieces of text that have been vectorized using techniques such as the Bag-of-Words (BoW) model or the Term Frequency-Inverse Document Frequency (TF-IDF) model. By comparing the cosine similarity of multiple documents, we can identify those that are most similar to each other and group them accordingly, which is useful for tasks such as document clustering or information retrieval.
+ 
+Euclidean distance:
+Euclidean distance is a measure of distance between two points in a multidimensional space. It is named after the ancient Greek mathematician Euclid, who first described it in his work "Elements".
+
+In two-dimensional space, the Euclidean distance between two points (x1, y1) and (x2, y2) is calculated using the Pythagorean theorem:
+
+distance = sqrt((x2 - x1)^2 + (y2 - y1)^2)
+
+In higher-dimensional spaces, the Euclidean distance between two points (x1, y1, z1, ..., xn) and (x2, y2, z2, ..., xn) is calculated using a similar formula:
+
+distance = sqrt((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2 + ... + (xn - x1)^2)
+
+Euclidean distance is commonly used in machine learning and data analysis to measure the similarity or dissimilarity between two data points. For example, it can be used in clustering algorithms to group similar data points together, or in anomaly detection to identify data points that are far from the cluster centroid.
+
+The difference between the two
+
+Ekran görüntüsü 2023-04-01 190221.png
+
+4. Making Suggestions Based on Similarities
+Making suggestions according to the similarities of the movie descriptions
+
