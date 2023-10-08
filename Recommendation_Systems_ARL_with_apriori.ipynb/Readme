@@ -20,7 +20,7 @@ CustomerID: Unique customer number
 Country: Country name. Country where the customer lives.
 
 Steps
-** 1. Data Preprocessing **
+1. Data Preprocessing 
 Data preprocessing is a critical step in data analysis and machine learning, as it involves transforming raw data into a format that is suitable for analysis or model training. This process can include cleaning the data by removing duplicates, correcting errors, and handling missing values, as well as transforming the data by scaling or normalizing it, feature engineering, and selecting relevant variables. The goal of data preprocessing is to improve the quality of the data and reduce the noise, so that it can be analyzed effectively and used to develop accurate models that provide meaningful insights. Overall, data preprocessing is a crucial step in any data science project, as it can greatly impact the accuracy and effectiveness of the resulting models.
 
 2. Create Association Rule Learning(ARL) data structure,
